@@ -1,0 +1,25 @@
+sqoop job \
+--create Ipl_Details \
+-- import \
+--connect "jdbc:mysql://ms.itversity.com:3306/retail_export" \
+--username retail_user \
+--password-file file:///home/itv001281/.password-file \
+--table "IPL_DETAIL_BALL_WISE_PRAVIN3" \
+--split-by "ID" \
+--warehouse-dir "./datalakestorage" \
+--incremental append \
+--check-column ID \
+--last-value 0
+ 
+sqoop job \
+--create Ipl_Matches \
+-- import \
+--connect "jdbc:mysql://ms.itversity.com:3306/retail_export" \
+--username retail_user \
+--password-file file:///home/itv001281/.password-file \
+--table "IPL_MATCHES_PRAVIN1" \
+--warehouse-dir "./datalakestorage" \
+--incremental append \
+--check-column ID \
+--last-value 0
+ 

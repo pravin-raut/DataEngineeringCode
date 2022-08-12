@@ -1,0 +1,12 @@
+sqoop job \
+--create IndiaTestingData \
+-- import \
+--connect "jdbc:mysql://ms.itversity.com:3306/retail_export" \
+--username retail_user \
+--password-file file:///home/itv001281/.password-file \
+--table "CoreIndiaTestingDetail_Pravin" \
+--warehouse-dir "./datalakestorage" \
+--incremental append \
+--check-column Sno \
+--last-value 0
+--compress

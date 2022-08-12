@@ -1,0 +1,16 @@
+sqoop create-hive-table \
+--connect "jdbc:mysql://ms.itversity.com:3306/retail_export" \
+--username retail_user \
+--password-file file:///home/itv001281/.password-file \
+--table "IPL_DETAIL_BALL_WISE_PRAVIN3" \
+--hive-table pravin.IPL_DETAIL_BALL_WISE_PRAVIN \
+--fields-terminated-by "|" \
+
+sqoop create-hive-table \
+--connect "jdbc:mysql://ms.itversity.com:3306/retail_export" \
+--username retail_user \
+--password-file file:///home/itv001281/.password-file \
+--table "IPL_MATCHES_PRAVIN" \
+--hive-table pravin.IPL_MATCHES_PRAVIN \
+--fields-terminated-by "|" \
+

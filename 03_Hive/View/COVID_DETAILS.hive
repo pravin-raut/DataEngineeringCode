@@ -1,0 +1,17 @@
+set hive.auto.convert.join=false;
+set hive.ignore.mapjoin.hint=false ;
+
+
+CREATE VIEW COVID_DETAILS
+AS
+SELECT  /*+MAP JOIN(T)*/ T.STATE
+	,T.TestDate
+	,T.TotalSamples
+	,T.Negative
+	,T.Positive
+	,C.Cured
+	,C.Deaths
+	,C.Confirmed
+FROM Performance_StateTestingDetails_Pravin T
+INNER JOIN Performance_IndiaTestingDetail_Pravin C ON C.STATE = T.STATE
+	AND C.TestDate = T.TestDate;

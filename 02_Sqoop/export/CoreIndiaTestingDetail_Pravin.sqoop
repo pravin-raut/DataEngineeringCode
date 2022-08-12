@@ -1,0 +1,9 @@
+sqoop-export \
+--connect "jdbc:mysql://ms.itversity.com:3306/retail_export" \
+--username retail_user \
+--password-file file:///home/itv001281/.password-file \
+--table "CoreIndiaTestingDetail_Pravin" \
+--clear-staging-table\
+--staging-table "STGIndiaTestingDetail_Pravin" \
+--export-dir "./pravin/Covid19_india-201004-194827.csv" \
+--fields-terminated-by ','

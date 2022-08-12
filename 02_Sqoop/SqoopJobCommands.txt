@@ -1,0 +1,3 @@
+sqoop job --exec Ipl_Matches
+sqoop job --show  Ipl_Details_Merge
+sqoop  job --delete  Ipl_Details_Merge
