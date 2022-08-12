@@ -1,0 +1,9 @@
+﻿Emp,Manager,Relationship
+2,3,Reports_TO
+3,8,Reports_TO
+4,3,Reports_TO
+5,3,Reports_TO(FTC)
+6,3,Reports_TO
+1,8,Reports_TO
+7,8,WORKS_WITH
+8,7,WORKS_WITH
